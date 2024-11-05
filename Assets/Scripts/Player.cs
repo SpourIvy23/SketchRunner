@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            wasGrounded = false; // Player is in the air
+            wasGrounded = false; // Player is in the air.
         }
 
         // Move the character
