@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4225b9518dcfe9148815564ba0fc053d
+guid: b89a96fe85f344644b287959537e7e83
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3469965183550696920
-    second: GROUNF_0
+      213: 1440222535461219958
+    second: MANHAENOITE_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,7 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GROUNF_0
+      name: MANHAENOITE_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2880
-        height: 454
+        x: 1084
+        y: 670
+        width: 821
+        height: 830
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 822dc7bdc0538dfc0800000000000000
-      internalID: -3469965183550696920
+      spriteID: 67eadafe3c2bcf310800000000000000
+      internalID: 1440222535461219958
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      GROUNF_0: -3469965183550696920
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
