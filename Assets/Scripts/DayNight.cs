@@ -25,7 +25,7 @@ public class Clock : MonoBehaviour
     void Update()
     {
         dayTime += Time.deltaTime;
-        if(dayTime >= 18)
+        if(dayTime >= 48)
         {   
             dayCount++; 
             dayTime = 0;
@@ -34,7 +34,7 @@ public class Clock : MonoBehaviour
         UpdateBackground(); // Smoothly transition the background if needed
 
         // Synchronize clock rotation with 24-hour cycle
-        transform.localEulerAngles = Vector3.forward * ((360 * dayTime) / 18);
+        transform.localEulerAngles = Vector3.forward * ((360 * dayTime) / 48);
 
         dayRenderer.transform.rotation = Quaternion.identity;
         nightRenderer.transform.rotation = Quaternion.identity;
@@ -42,7 +42,7 @@ public class Clock : MonoBehaviour
 
     void UpdateBackground(bool instantTransition = false)
     {
-        bool shouldBeDaytime = dayTime >= 8 && dayTime < 18;
+        bool shouldBeDaytime = dayTime >= 24 && dayTime < 48;
 
         if (shouldBeDaytime != isDaytime) // If there is a change from day to night or vice versa
         {
