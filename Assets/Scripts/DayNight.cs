@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Clock : MonoBehaviour 
+public class Clock : MonoBehaviour
 {
+    public static Clock Instance { get; private set; }  // Singleton instance
+
     float dayTime;
     int dayCount;
     public Transform sun;
@@ -15,36 +17,55 @@ public class Clock : MonoBehaviour
     public float transitionDuration = 2.0f;
     private bool isDaytime;
 
+    public float timeScale = 0.5f; // Set to 0.5 to double the duration of day and night
+
+    void Awake()
+    {
+        // Ensure there is only one instance of Clock
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
         dayCount = 0;
-        dayTime = 0;
-        UpdateBackground(true); // Initialize with day background if daytime
+        dayTime = 12; // Start at 6 AM to begin during daytime
+        UpdateBackground(true); // Initialize the background immediately to match daytime
     }
 
     void Update()
     {
-        dayTime += Time.deltaTime;
-        if(dayTime >= 48)
+        dayTime += Time.deltaTime * timeScale;
+        if(dayTime >= 24)
         {   
             dayCount++; 
             dayTime = 0;
         }
 
-        UpdateBackground(); // Smoothly transition the background if needed
+        UpdateBackground(); 
 
-        // Synchronize clock rotation with 24-hour cycle
-        transform.localEulerAngles = Vector3.forward * ((360 * dayTime) / 48);
+        transform.localEulerAngles = Vector3.forward * ((360 * dayTime) / 24);
 
         dayRenderer.transform.rotation = Quaternion.identity;
         nightRenderer.transform.rotation = Quaternion.identity;
     }
 
+    public bool IsDaytime()
+    {
+        return isDaytime;
+    }
+
     void UpdateBackground(bool instantTransition = false)
     {
-        bool shouldBeDaytime = dayTime >= 24 && dayTime < 48;
+        bool shouldBeDaytime = dayTime >= 6 && dayTime < 18;
 
-        if (shouldBeDaytime != isDaytime) // If there is a change from day to night or vice versa
+        if (shouldBeDaytime != isDaytime)
         {
             isDaytime = shouldBeDaytime;
             if (instantTransition)

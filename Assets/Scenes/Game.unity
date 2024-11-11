@@ -277,7 +277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c426365d8efdaf7449d74dc3b24649ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 531562098695013522, guid: 5590b7c3cc000c644b838ba1bf7cb634, type: 3}
+  dayObstaclePrefab: {fileID: 531562098695013522, guid: 5590b7c3cc000c644b838ba1bf7cb634, type: 3}
+  nightObstaclePrefab: {fileID: 3328327953691454317, guid: 691bc6956defb144299491938cfec705, type: 3}
   minSpawnInterval: 1.5
   maxSpawnInterval: 3
   spawnXPosition: 10
@@ -774,9 +775,10 @@ MonoBehaviour:
   sun: {fileID: 0}
   moon: {fileID: 0}
   clockAnimator: {fileID: 0}
-  dayRenderer: {fileID: 0}
-  nightRenderer: {fileID: 0}
+  dayRenderer: {fileID: 2113841733}
+  nightRenderer: {fileID: 1669357411}
   transitionDuration: 2
+  timeScale: 0.5
 --- !u!1 &1069832545
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,6 +928,7 @@ MonoBehaviour:
   dayRenderer: {fileID: 2113841733}
   nightRenderer: {fileID: 1669357411}
   transitionDuration: 2
+  timeScale: 0.5
 --- !u!4 &1282855971
 Transform:
   m_ObjectHideFlags: 0
