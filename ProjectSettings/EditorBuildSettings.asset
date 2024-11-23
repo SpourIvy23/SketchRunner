@@ -11,5 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/GameOverDay.unity
+    guid: 2b6691e6b8211c54aad132deeda813b2
+  - enabled: 1
+    path: Assets/Scenes/GameOverNight.unity
+    guid: 880d0059a7892914488af140fe5af783
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

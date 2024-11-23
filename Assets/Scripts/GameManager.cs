@@ -29,6 +29,13 @@ public class GameManager : MonoBehaviour
     private void NewGame()
     {
         gameSpeed = initialGamespeed;
+        var scoreManager = Object.FindFirstObjectByType<ScoreManager>(); // or FindAnyObjectByType<ScoreManager>()
+    
+    if (scoreManager != null)
+    {
+        scoreManager.ResetScore(); // Reset current score only
+    }
+
     }
 
     private void Update()

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7572824141243385289}
   m_Layer: 0
   m_Name: asas_0
-  m_TagString: GameOver
+  m_TagString: DayObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,12 +104,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.279999, y: 8.729999, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 9.399651, y: 8.729999, z: 0.2}
+  m_Center: {x: -0.11583632, y: 0, z: 0}
 --- !u!114 &7572824141243385289
 MonoBehaviour:
   m_ObjectHideFlags: 0
